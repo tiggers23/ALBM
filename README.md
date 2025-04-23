@@ -31,3 +31,17 @@ The relevant script files are saved in [Run,md](docs/RUN.md)
 
 Please cite our paper if you find it useful!
 
+```
+@misc{zhang2025attributeformedclassspecificconceptspace,
+      title={Attribute-formed Class-specific Concept Space: Endowing Language Bottleneck Model with Better Interpretability and Scalability}, 
+      author={Jianyang Zhang and Qianli Luo and Guowu Yang and Wenjing Yang and Weide Liu and Guosheng Lin and Fengmao Lv},
+      year={2025},
+      eprint={2503.20301},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2503.20301}, 
+}
+```
+
+
+
