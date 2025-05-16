@@ -569,7 +569,7 @@ class CustomCLIP_Attribute(nn.Module):
 
 
         else: # test
-            if self.prompt_learner.vision_prompts.requires_grad is True:
+            if (self.prompt_learner.vision_prompts.requires_grad is True) and (self.prompt_learner.training):
                 prompt_features, image_features = self.image_encoder(img.type(self.dtype), vision_prompts, NUM_ATTR[self.cfg.DATASET.NAME])
                 prompt_features = prompt_features / prompt_features.norm(dim=-1, keepdim=True)
 
@@ -581,7 +581,7 @@ class CustomCLIP_Attribute(nn.Module):
                 logits_scores = logits_prompt.permute(2, 0, 1)
                 list_scores = [t for t in logits_scores]
                 return list_scores, logits_prompt
-            elif self.prompt_learner.mat.requires_grad is True:
+            else: 
                 prompt_features, image_features = self.image_encoder(img.type(self.dtype), vision_prompts, NUM_ATTR[self.cfg.DATASET.NAME])
                 prompt_features = prompt_features / prompt_features.norm(dim=-1, keepdim=True)
 
